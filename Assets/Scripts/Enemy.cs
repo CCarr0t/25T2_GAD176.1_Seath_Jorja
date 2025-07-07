@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -27,6 +28,11 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0)
             Debug.Log("The player has killed an enemy!");
+
+        if (chaseTarget == null)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void FixedUpdate()
