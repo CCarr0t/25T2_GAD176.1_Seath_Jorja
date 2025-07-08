@@ -16,6 +16,11 @@ public class PlayerShoot : MonoBehaviour
 
     private float timer;
 
+
+                        //GET THIS CHECKED / FIXED!!
+    //Tracks if the weapon is being held by the player
+    //public GameObject heldWeapon;
+
     private void Update()
     {
 
@@ -41,6 +46,20 @@ public class PlayerShoot : MonoBehaviour
                 Shoot();
             }
         }
+
+                            //GET THIS CHECKED / FIXED!!
+        //if (!(heldWeapon.GetComponent<PickUp>().isHeld = true))
+        //{
+        //    Shoot();
+        //}
+        //else
+        //{
+        //    if (!(heldWeapon.GetComponent<PickUp>().isHeld = false))
+        //    {
+
+        //    }
+        //}
+
     }
 
     // Shooting out the bullet/the bullet prefab
