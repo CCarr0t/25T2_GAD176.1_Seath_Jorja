@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class PlayerShoot : MonoBehaviour
+public class Rifle : MonoBehaviour
 {
     [Header("Bullet Variables")]
     public float bulletSpeed;
@@ -16,10 +16,6 @@ public class PlayerShoot : MonoBehaviour
 
     private float timer;
 
-
-                        //GET THIS CHECKED / FIXED!!
-    //Tracks if the weapon is being held by the player
-    //public GameObject heldWeapon;
 
     private void Update()
     {
@@ -36,30 +32,23 @@ public class PlayerShoot : MonoBehaviour
         {
             if (Input.GetButton("Fire1") && timer <= 0)
             {
-                Shoot();
+                if (gameObject.GetComponent<PickUp>().isHeld == true)
+                {
+                    Shoot();
+                }
             }
+
         }
         else
         {
             if (Input.GetButtonDown("Fire1") && timer <= 0)
             {
-                Shoot();
+                if (gameObject.GetComponent<PickUp>().isHeld == true)
+                {
+                    Shoot();
+                }
             }
         }
-
-                            //GET THIS CHECKED / FIXED!!
-        //if (!(heldWeapon.GetComponent<PickUp>().isHeld = true))
-        //{
-        //    Shoot();
-        //}
-        //else
-        //{
-        //    if (!(heldWeapon.GetComponent<PickUp>().isHeld = false))
-        //    {
-
-        //    }
-        //}
-
     }
 
     // Shooting out the bullet/the bullet prefab

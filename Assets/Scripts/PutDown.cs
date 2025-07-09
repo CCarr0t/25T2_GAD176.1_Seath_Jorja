@@ -34,6 +34,7 @@ public class PutDown : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Player has entered");
         if (other.CompareTag("Player"))
         {
             Debug.Log("Press 'Q' to drop the weapon"); // To test whether it is working
@@ -51,6 +52,7 @@ public class PutDown : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        Debug.Log("Player has exited");
         //When the player exits the table area, set nearby to flase and held weapon to null
         if (other.CompareTag("Player"))
         {
