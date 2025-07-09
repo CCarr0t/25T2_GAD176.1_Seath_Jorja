@@ -150,5 +150,7 @@ namespace StarterAssets
             prefabInstance.transform.localEulerAngles = Vector3.zero;
             prefabInstance.transform.localScale = Vector3.one;
         }
+
+        
     }
 }
