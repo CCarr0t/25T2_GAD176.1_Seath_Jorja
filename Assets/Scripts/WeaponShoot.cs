@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
-public class Rifle : MonoBehaviour
+public class WeaponShoot : MonoBehaviour
 {
     [Header("Bullet Variables")]
     public float bulletSpeed;
