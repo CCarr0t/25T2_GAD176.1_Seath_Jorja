@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 758570011451760374}
   - component: {fileID: 4701372784005751875}
   - component: {fileID: 7366422223207580900}
-  - component: {fileID: 1392555685591456785}
   - component: {fileID: 2982627390709463523}
   m_Layer: 0
   m_Name: Enemy
@@ -126,24 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1524ead1e425f594e8bfb0d7f9903323, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 4701372784005751875}
-  chaseTarget: {fileID: 0}
-  isCurrentlyChasing: 1
   health: 50
---- !u!114 &1392555685591456785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7431621337051565507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcafa82e8409492498673462636f139a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 15
-  playerHealth: {fileID: 0}
 --- !u!136 &2982627390709463523
 CapsuleCollider:
   m_ObjectHideFlags: 0
