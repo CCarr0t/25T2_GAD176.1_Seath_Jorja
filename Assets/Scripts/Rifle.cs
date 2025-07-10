@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class PlayerShoot : MonoBehaviour
+public class Rifle : MonoBehaviour
 {
     [Header("Bullet Variables")]
     public float bulletSpeed;
@@ -15,6 +15,7 @@ public class PlayerShoot : MonoBehaviour
     public GameObject bulletPrefab;
 
     private float timer;
+
 
     private void Update()
     {
@@ -31,14 +32,21 @@ public class PlayerShoot : MonoBehaviour
         {
             if (Input.GetButton("Fire1") && timer <= 0)
             {
-                Shoot();
+                if (gameObject.GetComponent<PickUp>().isHeld == true)
+                {
+                    Shoot();
+                }
             }
+
         }
         else
         {
             if (Input.GetButtonDown("Fire1") && timer <= 0)
             {
-                Shoot();
+                if (gameObject.GetComponent<PickUp>().isHeld == true)
+                {
+                    Shoot();
+                }
             }
         }
     }
